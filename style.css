@@ -50,7 +50,7 @@ body {
   display: flex;
   align-items: center;
   height: 40px;
-  margin-left: -50px; 
+  margin-left: -50px;
 }
 
 .icons a img {
@@ -61,11 +61,11 @@ body {
   transition: transform 0.2s ease;
 }
 .icons a:hover img {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .main-nav {
-  position: fixed; 
+  position: fixed;
   top: 90px;
   left: 0;
   width: 100%;
@@ -109,6 +109,7 @@ body {
   align-items: center;
   gap: 10px;
 }
+
 
 .carousel input {
   display: none;
@@ -233,14 +234,14 @@ body {
 }
 .more2 {
   text-align: right;
-  font-size: 13px;
+  font-size: 14px;
   color: #c6a163;
 }
 
 .footer {
   background-color: #000000;
   padding: 20px;
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
 }
 .footer-links {
@@ -274,7 +275,6 @@ body {
   text-decoration: underline;
   cursor: pointer;
 }
-
 
 .main-nav a:hover {
   text-decoration: underline;
@@ -324,7 +324,7 @@ body {
 }
 
 .card p {
-  font-size: 13px;
+  font-size: 14px;
   padding: 0 10px 15px;
   line-height: 1.6;
 }
