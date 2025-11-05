@@ -6,26 +6,25 @@ body {
   padding-top: 130px;
 }
 
-/* 導覽列 */
 .navbar {
-  position: fixed;         /* ✅ 固定在畫面上 */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;           /* 確保在最上層 */
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #000000;
   padding: 10px 20px;
   height: 70px;
-  border-bottom: 1px solid #c6a163; /* ✅ 下方橫線 */
+  border-bottom: 1px solid #c6a163;
 }
 
 .logo img{
-  height: 100%;       /* ✅ 讓圖片高度跟 header 一樣 */
-  width: auto;        /* 自動維持比例 */
-  object-fit: contain; /* 確保圖片完整顯示不被裁切 */
+  height: 100%;
+  width: auto;
+  object-fit: contain;
   display: block;
 }
 
@@ -36,7 +35,7 @@ body {
   flex: 0 0 100px;
 }
 .logo {
-  height: 100%;          /* ✅ 讓 logo 區塊跟 header 一樣高 */
+  height: 100%;
   display: flex;
   align-items: center;
 
@@ -48,10 +47,10 @@ body {
 }
 
 .icons a {
-  display: flex;         /* 或 block 也可以 */
-  align-items: center;   /* 讓圖置中 */
+  display: flex;
+  align-items: center;
   height: 40px;
-  margin-left: -50px; /* 每個 icon 往左微調 */
+  margin-left: -50px; 
 }
 
 .icons a img {
@@ -62,29 +61,27 @@ body {
   transition: transform 0.2s ease;
 }
 .icons a:hover img {
-  transform: scale(1.1); /* 滑過放大一點 */
+  transform: scale(1.1); 
 }
 
-/* 主選單 */
 .main-nav {
-  position: fixed;          /* ✅ 讓主選單也固定 */
-  top: 90px;                /* ✅ 緊接在 header 下方 */
+  position: fixed; 
+  top: 90px;
   left: 0;
   width: 100%;
-  background-color: #000000; /* 與 header 一致 */
+  background-color: #000000;
   text-align: center;
   padding: 15px;
-  z-index: 999;             /* 比內容高，但低於 navbar */
-  border-bottom: 1px solid #c6a163; /* ✅ 下方橫線 */
+  z-index: 999;
+  border-bottom: 1px solid #c6a163;
 }
 
 .main-nav a {
   color: #c6a163;
   text-decoration: none;
-  margin: 130px auto 0;   /* ✅ 預留上方空間避免被擋住 */
+  margin: 130px auto 0;
 }
 
-/* 分隔線 */
 .divider1 {
   border: 0.5px solid #c6a163;
   width: 75%;
@@ -95,7 +92,7 @@ body {
   width: 93%;
   margin-bottom: 30px;
 }
-/* 輪播圖區 */
+
 .carousel {
   position: relative;
   text-align: center;
@@ -104,7 +101,7 @@ body {
   overflow: hidden;
   border-radius: 10px;
 }
-/* 切換點點 */
+
 .carousel-controls {
   margin-top: 8px;
   display: flex;
@@ -113,17 +110,20 @@ body {
   gap: 10px;
 }
 
-/* 隱藏 radio 按鈕 */
 .carousel input {
   display: none;
 }
 
-/* 圖片區 */
 .carousel-inner {
   display: flex;
-  width: 100%; /* 4 張圖 */
+  width: 100%;
   transition: transform 0.5s ease;
 }
+
+.carousel img {
+  border-radius: 10px;
+}
+
 
 .slide {
   width: 100%;
@@ -133,9 +133,9 @@ body {
 
 .slide img {
   width: 100%;
-  height: 650px; /* 固定高度，依你的 .carousel-img 高度 */
-  object-fit: cover; /* ← 關鍵，讓圖片維持比例、上下裁切 */
-  object-position: center; /* 圖片居中 */
+  height: 650px;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -147,7 +147,6 @@ body {
   cursor: pointer;
 }
 
-/* 點選不同 radio → 改變位置 */
 #slide1:checked ~ .carousel-inner {
   transform: translateX(0%);
 }
@@ -161,7 +160,6 @@ body {
   transform: translateX(-300%);
 }
 
-/* 對應的點點變色 */
 #slide1:checked ~ .carousel-controls label[for="slide1"],
 #slide2:checked ~ .carousel-controls label[for="slide2"],
 #slide3:checked ~ .carousel-controls label[for="slide3"],
@@ -169,7 +167,6 @@ body {
   background-color: #c6a163;
 }
 
-/* 最新消息 */
 .news {
   text-align: center;
   margin: 25px auto;
@@ -183,7 +180,7 @@ body {
 
 .news-list .date {
   display: inline-block;
-  width: 350px;       /* 固定寬度，所有日期對齊 */
+  width: 350px;
   font-weight: bold;
 }
 .news-list p {
@@ -201,7 +198,6 @@ body {
   padding-right: 40px;
 }
 
-/* 熱門菜單 & 產地嚴選 */
 .section {
   display: flex;
   justify-content: center;
@@ -223,8 +219,8 @@ body {
 }
 .image img{
   width: 100%;
-  height: 100%;          /* ✅ 讓圖片高度填滿容器 */
-  object-fit: cover;     /* ✅ 自動裁切多餘部分，保持比例 */
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 .text {
@@ -240,7 +236,7 @@ body {
   font-size: 13px;
   color: #c6a163;
 }
-/* 頁尾 */
+
 .footer {
   background-color: #000000;
   padding: 20px;
@@ -259,40 +255,35 @@ body {
   text-decoration: underline;
 }
 
-/* 🟡 最新消息 hover 底線效果 */
 .news-list p:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* 🟡 右邊 ...查看更多 hover 底線效果 */
 .more:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
 .more2 a {
-  color: inherit;           /* 繼承 .more2 的文字顏色 */
-  text-decoration: none;    /* 預設不要底線 */
+  color: inherit;
+  text-decoration: none;
 }
 
 .more2 a:hover {
-  text-decoration: underline; /* 滑過才出現底線 */
+  text-decoration: underline;
   cursor: pointer;
 }
 
 
-/* 滑過有底線 */
 .main-nav a:hover {
   text-decoration: underline;
 }
 
-/* 當前頁面 active 狀態 */
 .main-nav a.active {
-  font-weight: 700; /* 粗體 */
+  font-weight: 700;
 }
 
-/* 🟡 產地卡片區 */
 .origin-section {
   display: flex;
   flex-wrap: wrap;
@@ -310,7 +301,7 @@ body {
   color: #c6a163;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   border-radius: 4px;
-  transform-origin: center; /* 讓放大從中心發生 */
+  transform-origin: center;
 }
 
 .card:hover {
@@ -350,7 +341,7 @@ body {
 
 .menu-list .prise {
   display: inline-block;
-  width: 350px;       /* 固定寬度，所有日期對齊 */
+  width: 350px;
   font-weight: bold;
 }
 
